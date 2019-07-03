@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <robot name="flyingcar" xmlns:xacro="https://www.ros.org/wiki/xacro" >
   <xacro:include filename="$(find flyingcar_description)/urdf/flyingcar.urdf.xacro" />
+  <xacro:include filename="$(find flyingcar_description)/urdf/flyingcar.materials.xacro"/>
 
   <xacro:flyingcar parent="base_link"/>
 
@@ -13,5 +14,5 @@
       <material name="White" />
     </visual>
   </link>
-  
+
 </robot>

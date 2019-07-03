@@ -1,7 +1,6 @@
 <?xml version="1.0" ?>
 
 <robot xmlns:xacro="https://www.ros.org/wiki/xacro" >
-  <xacro:include filename="$(find flyingcar_description)/urdf/flyingcar.materials.xacro"/>
   <xacro:include filename="$(find flyingcar_description)/urdf/flyingcar.gazebo.xacro"/>
   <xacro:include filename="$(find flyingcar_description)/urdf/sensors/hokuyo_utm30lx.urdf.xacro" />
   <xacro:include filename="$(find flyingcar_description)/urdf/sensors/_d435.urdf.xacro" />
@@ -9,12 +8,12 @@
   <xacro:macro name="flyingcar" params="parent">
 
     <!--body of sensor-->
-    <joint name="body_link_joint" type="fixed">
+    <joint name="pack_link_joint" type="fixed">
       <origin xyz="0 0 0.0375" rpy="0 0 0"/>
       <parent link="${parent}"/>
-      <child link="body_link" />
+      <child link="pack_link" />
     </joint>
-    <link name="body_link">
+    <link name="pack_link">
       <inertial>
         <mass value="0.5"/>
         <origin rpy="0 0 0" xyz="0 0 0"/> <!--0.36/2 - 0.09-->
