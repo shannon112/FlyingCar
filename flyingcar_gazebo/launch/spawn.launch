@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <param name="robot_description" command="python $(find xacro)/xacro.py '$(find flyingcar_description)/robot/flyingcar.urdf.xacro'" />
+    <arg name="world_name" default="$(find ironfish_gazebo)/world/iceira302.world"/>
+    <arg name="gui" default="true"/>
+    <arg name="x" default="0"/>
+    <arg name="y" default="0"/>
+    <arg name="z" default="0.101"/>
+
+    <!-- Launch gazebo world.
+    We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+      <arg name="world_name" default="$(arg world_name)"/>
+      <arg name="gui" default="$(arg gui)"/>
+    </include>
+
+    <!--spawn robot in gazebo env-->
+    <node name="flyingcar_spawn" pkg="gazebo_ros" type="spawn_model" output="screen"
+          args="-urdf -param robot_description -model flyingcar -x $(arg x) -y $(arg y) -z $(arg z)" />
+
+    <!-- Combine joint values -->
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher"/>
+
+    <!-- Show in Rviz   -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find flyingcar_gazebo)/rviz/flyingcar.rviz"/>
+
+</launch>

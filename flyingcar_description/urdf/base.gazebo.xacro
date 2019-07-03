@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<robot name="flyingcar" xmlns:xacro="https://www.ros.org/wiki/xacro" >
+  <gazebo reference="base_link">
+    <material>Gazebo/Orange</material>
+  </gazebo>
+  <gazebo reference="body_link">
+    <material>Gazebo/Orange</material>
+  </gazebo>
+
+</robot>
