@@ -57,12 +57,12 @@
 
     <!-- Hokuyo utm30lx-->
     <xacro:hokuyo_utm30lx name="hokuyo" parent="${parent}">
-      <origin xyz="0.047 0.006 0.463" rpy="0 0 0"/> <!--real measure from blue extend version-->
+      <origin xyz="0.0 0.0 0.105" rpy="0 0 0"/> <!--real measure from blue extend version-->
     </xacro:hokuyo_utm30lx>
 
     <!-- Intel realsense-->
     <xacro:sensor_d435 parent="${parent}">
-      <origin xyz="0.047 0.006 0.463" rpy="0 0 0"/> <!--real measure from blue extend version-->
+      <origin xyz="0.032 0.0 0.05" rpy="0 0 0"/> <!--real measure from blue extend version-->
     </xacro:sensor_d435>
 
   </xacro:macro>
