@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<robot name="flyingcar" xmlns:xacro="https://www.ros.org/wiki/xacro" >
+  <xacro:include filename="$(find flyingcar_description)/urdf/flyingcar.urdf.xacro" />
+
+  <xacro:flyingcar parent="base_link"/>
+
+  <link name="base_link"><!--bottom of sensor pack-->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.01 0.01" />
+      </geometry>
+      <material name="White" />
+    </visual>
+  </link>
+  
+</robot>

@@ -1,4 +1,0 @@
-<?xml version="1.0"?>
-<robot name="flyingcar" xmlns:xacro="https://www.ros.org/wiki/xacro" >
-  <xacro:include filename="$(find flyingcar_description)/urdf/base.urdf.xacro" />
-</robot>
