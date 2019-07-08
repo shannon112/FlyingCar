@@ -6,3 +6,5 @@ Sparkfun imu m0: miniUSB to USB3.0
 ydlidar power: miniUSB to USB3.0   
 
 sudo apt install ros-kinetic-hector-gazebo-plugins  
+
+roslaunch ydlidar lidar_view.launch  
