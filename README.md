@@ -12,6 +12,13 @@ sudo apt install ros-kinetic-hector-gazebo-plugins
 ```
 flyingcar_imu
 ```
+# get the authority
+sudo usermod -a -G dialout flyingcar
+sudo reboot
+
+# some dependences if error occurs, but the gui may not support on melodic (Ubuntu18.04), not found apt python-visual pkg
+pip install pyserial
+pip install vpython 
 ```
 flyingcar_rgbd
 ```
@@ -35,6 +42,9 @@ make
 
 # install libraries
 sudo make install
+
+# some dependences if error occurs
+sudo apt-get install doxygen qt4-qmake qt4-default libgl1-mesa-dev libglu1-mesa-dev libglew-dev
 ```
 ## Usage  
 flyingcar_imu
@@ -49,4 +59,8 @@ roslaunch ydlidar lidar_view.launch
 ```
 flyingcar_rgb
 ```
+```
+test CSI camera with gstream
+```
+gst-launch-1.0 nvarguscamerasrc ! 'video/x-raw(memory:NVMM),width=3820, height=2464, framerate=21/1, format=NV12' ! nvvidconv flip-method=0 ! 'video/x-raw,width=960, height=616' ! nvvidconv ! nvegltransform ! nveglglessink -e
 ```
