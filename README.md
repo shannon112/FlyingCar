@@ -42,6 +42,14 @@ cd installLibrealsense
 
 # patches to the kernel models
 ./patchUbuntu.sh
+
+# build realsense ros driver
+cd ~/workspace/catkin_ws/src
+git clone https://github.com/intel-ros/realsense.git
+cd realsense
+git checkout 2.0.3
+cd ~/workspace/catkin_ws
+catkin_make
 ```
 **flyingcar_sensors Lidar**
 ```bash
