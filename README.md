@@ -58,6 +58,16 @@ sudo make install
 sudo apt-get install doxygen qt4-qmake qt4-default libgl1-mesa-dev libglu1-mesa-dev libglew-dev
 ```
 ## Usage  
+flyingcar_description
+```bash
+# robot model
+roslaunch flyingcar_description spawn.launch
+```
+flyingcar_gazebo
+```bash
+# simulation
+roslaunch flyingcar_gazebo spawn.launch
+```
 flyingcar_sensors
 ```bash
 # imu 
@@ -73,6 +83,3 @@ test CSI camera with gstream
 ```bash
 gst-launch-1.0 nvarguscamerasrc ! 'video/x-raw(memory:NVMM),width=3820, height=2464, framerate=21/1, format=NV12' ! nvvidconv flip-method=0 ! 'video/x-raw,width=960, height=616' ! nvvidconv ! nvegltransform ! nveglglessink -e
 ```
-
-
-roslaunch ydlidar lidar_view.launch  
