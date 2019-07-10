@@ -6,11 +6,11 @@ Sparkfun imu m0: miniUSB to USB3.0
 ydlidar power: miniUSB to USB3.0   
 
 ## Dependences  
-flyingcar_gazebo imu simulation pkg
+**flyingcar_gazebo** imu simulation pkg
 ```bash
 sudo apt install ros-kinetic-hector-gazebo-plugins  
 ```
-flyingcar_imu
+**flyingcar_sensor IMU**
 ```bash
 # build imu ros driver
 cd ~/workspace/catkin_ws/src
@@ -26,10 +26,10 @@ sudo reboot
 pip install pyserial
 pip install vpython 
 ```
-flyingcar_rgbd
+**flyingcar_sensor RGBD**
 ```bash
 ```
-flyingcar_laser
+**flyingcar_sensor Lidar**
 ```bash
 # build laser ros driver
 cd ~/workspace/catkin_ws/src
