@@ -37,7 +37,7 @@ git clone https://github.com/EAIBOT/ydlidar.git
 cd ~/workspace/catkin_ws
 catkin_make
 ```
-**flyingcar_sensors RGB**, because our CSI camera driver depend on [jetson-utils](https://github.com/dusty-nv/jetson-utils), so we need to build [jetson-inference](https://github.com/dusty-nv/jetson-inference).
+**flyingcar_sensors RGB**, because our CSI camera driver depend on [jetson-utils](https://github.com/dusty-nv/jetson-utils), so we need to build [jetson-inference](https://github.com/dusty-nv/jetson-inference). Moreover, we also tried [gscam](http://wiki.ros.org/gscam) and [jetson_csi_camera](https://github.com/peter-moran/jetson_csi_cam), but they do not work with jeston nano.
 ```bash
 # clone the repo and submodules
 cd ~/workspace
@@ -79,7 +79,7 @@ roslaunch flyingcar_sensors rgbd.launch rviz:=1
 # rgb camera
 roslaunch flyingcar_sensors rgb.launch rviz:=1
 ```
-test CSI camera with gstream
+test CSI camera with gstream, more test could be found at [JetsonHacksNano/CSI-Camera](https://github.com/JetsonHacksNano/CSI-Camera)
 ```bash
 gst-launch-1.0 nvarguscamerasrc ! 'video/x-raw(memory:NVMM),width=3820, height=2464, framerate=21/1, format=NV12' ! nvvidconv flip-method=0 ! 'video/x-raw,width=960, height=616' ! nvvidconv ! nvegltransform ! nveglglessink -e
 ```
