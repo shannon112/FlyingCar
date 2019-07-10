@@ -12,6 +12,7 @@ sudo apt install ros-kinetic-hector-gazebo-plugins
 ```
 flyingcar_imu
 ```bash
+# build imu ros driver
 cd ~/workspace/catkin_ws/src
 git clone https://github.com/KristofRobot/razor_imu_9dof
 cd ~/workspace/catkin_ws
@@ -30,6 +31,11 @@ flyingcar_rgbd
 ```
 flyingcar_laser
 ```bash
+# build laser ros driver
+cd ~/workspace/catkin_ws/src
+git clone https://github.com/EAIBOT/ydlidar.git
+cd ~/workspace/catkin_ws
+catkin_make
 ```
 flyingcar_rgb, because our CSI camera driver depend on [jetson-utils](https://github.com/dusty-nv/jetson-utils), so we need to build [jetson-inference](https://github.com/dusty-nv/jetson-inference).
 ```bash
