@@ -10,7 +10,7 @@ ydlidar power: miniUSB to USB3.0
 ```bash
 sudo apt install ros-kinetic-hector-gazebo-plugins  
 ```
-**flyingcar_sensors IMU**
+**flyingcar_sensors IMU**, more detail could be found at [razor_imu_9dof ros wiki](http://wiki.ros.org/razor_imu_9dof). Calibration result at [here](https://github.com/shannon112/imu_calibration)
 ```bash
 # build imu ros driver
 cd ~/workspace/catkin_ws/src
@@ -26,8 +26,22 @@ sudo reboot
 pip install pyserial
 pip install vpython 
 ```
-**flyingcar_sensors RGBD**
+**flyingcar_sensors RGBD**, because librealsense could not directly install at ARM-based SBC, we would follow jetsonhacks [article](https://www.jetsonhacks.com/2019/05/16/jetson-nano-realsense-depth-camera/) to build the libraries.
 ```bash
+# install the swapfile:
+cd ~/workspace
+git clone https://github.com/jetsonhacksnano/installSwapfile
+cd installSwapfile
+./installSwapfile.sh
+cd ..
+
+# install librealsense
+git clone https://github.com/jetsonhacksnano/installLibrealsense
+cd installLibrealsense
+./installLibrealsense.sh -c
+
+# patches to the kernel models
+./patchUbuntu.sh
 ```
 **flyingcar_sensors Lidar**
 ```bash
