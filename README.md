@@ -12,6 +12,11 @@ sudo apt install ros-kinetic-hector-gazebo-plugins
 ```
 flyingcar_imu
 ```
+cd ~/workspace/catkin_ws/src
+git clone https://github.com/KristofRobot/razor_imu_9dof
+cd ~/workspace/catkin_ws
+catkin_make
+
 # get the authority
 sudo usermod -a -G dialout flyingcar
 sudo reboot
