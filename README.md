@@ -58,6 +58,9 @@ cd ~/workspace/catkin_ws/src
 git clone https://github.com/EAIBOT/ydlidar.git
 cd ~/workspace/catkin_ws
 catkin_make
+
+# get the right device name
+sudo ./initenv.sh
 ```
 **flyingcar_sensors RGB**, because our CSI camera driver depend on [jetson-utils](https://github.com/dusty-nv/jetson-utils), so we need to build [jetson-inference](https://github.com/dusty-nv/jetson-inference). Moreover, we also tried [gscam](http://wiki.ros.org/gscam) and [jetson_csi_camera](https://github.com/peter-moran/jetson_csi_cam), but they do not work with jeston nano.
 ```bash
