@@ -39,6 +39,9 @@ cd realsense
 git checkout 2.0.3 #(or 2.1.3)
 cd ~/workspace/catkin_ws
 catkin_make
+
+# rs_rgbd launch dependence
+sudo apt install ros-kinetic-rgbd-launch
 ```
 **flyingcar_sensors Lidar**
 ```bash
