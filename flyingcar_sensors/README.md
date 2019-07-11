@@ -73,4 +73,10 @@ sudo make install
 
 # some dependences if error occurs
 sudo apt-get install doxygen qt4-qmake qt4-default libgl1-mesa-dev libglu1-mesa-dev libglew-dev
+
+# build ros rgb csi camera driver
+cd ~/workspace/catkin_ws/src
+git clone https://github.com/shannon112/jetson_nano_camera.git
+cd ~/workspace/catkin_ws
+catkin_make
 ```
