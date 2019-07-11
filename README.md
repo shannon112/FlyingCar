@@ -31,7 +31,7 @@ test CSI camera with gstream, more test could be found at [JetsonHacksNano/CSI-C
 ```bash
 gst-launch-1.0 nvarguscamerasrc ! 'video/x-raw(memory:NVMM),width=3820, height=2464, framerate=21/1, format=NV12' ! nvvidconv flip-method=0 ! 'video/x-raw,width=960, height=616' ! nvvidconv ! nvegltransform ! nveglglessink -e
 ```
-test realsense d435 on realsense viewer
+test realsense d435 on realsense viewer (make sure you are using 3.0 port, 3.0 wire, and the correct orientation of type-C)
 ```
 cd /usr/local/bin
 realsense-viewer 
