@@ -36,7 +36,7 @@ cd installLibrealsense
 cd ~/workspace/catkin_ws/src
 git clone https://github.com/intel-ros/realsense.git
 cd realsense
-git checkout 2.0.3
+git checkout 2.0.3 #(or 2.1.3)
 cd ~/workspace/catkin_ws
 catkin_make
 ```
