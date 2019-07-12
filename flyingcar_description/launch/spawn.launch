@@ -13,7 +13,7 @@
 
     <!-- Show in Rviz   -->
     <group if="$(arg rviz)">
-      <node name="rviz" pkg="rviz" type="rviz" args="-d $(find flyingcar_gazebo)/rviz/flyingcar.rviz"/>
+      <node name="rviz" pkg="rviz" type="rviz" args="-d $(find flyingcar_description)/rviz/flyingcar.rviz"/>
     </group>
 
 
