@@ -1,15 +1,19 @@
 # FlyingCar
 A portable sensor pack with laser range scanner, IMU, CSI camera, RGBD camera and SBC, no encoder needed.  
+
 ydlidar laser: typeC to USB3.0  
 realsense d435: typeC to USB3.0  
 Sparkfun imu m0: miniUSB to USB3.0  
-ydlidar power: miniUSB to USB3.0   
+ydlidar power: miniUSB to USB2.0 (power only)   
+jetson nano power: miniUSB to USB2.0 (power only)   
+
+<img src="https://github.com/shannon112/FlyingCar/blob/master/flyingcar_demo/result/device_back.jpg" height=270/> <img src="https://github.com/shannon112/FlyingCar/blob/master/flyingcar_demo/result/device_front.jpg" height=270/> <img src="https://github.com/shannon112/FlyingCar/blob/master/flyingcar_demo/result/real_rviz.png" height=270/>
 
 ## Usage  
 flyingcar_description
 ```bash
 # robot model
-roslaunch flyingcar_description spawn.launch
+roslaunch flyingcar_description spawn.launch rviz:=1
 ```
 flyingcar_gazebo
 ```bash
@@ -26,6 +30,13 @@ roslaunch flyingcar_sensors lidar.launch rviz:=1
 roslaunch flyingcar_sensors rgbd.launch rviz:=1
 # rgb camera
 roslaunch flyingcar_sensors rgb.launch rviz:=1
+```
+flyingcar_demo
+```bash
+# real device all sensor launch on FlyingCar
+roslaunch flyingcar_demo spawn_with_sensors.launch rviz:=0
+# monitor by pc ros master
+roslaunch flyingcar_demo spawn_with_sensors_rviz.launch
 ```
 test CSI camera with gstream, more test could be found at [JetsonHacksNano/CSI-Camera](https://github.com/JetsonHacksNano/CSI-Camera)
 ```bash
