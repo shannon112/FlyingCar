@@ -1,0 +1,12 @@
+<launch>
+  <arg name="rviz" default="false"/>
+
+  <!--node pkg="jetson_nano_camera" type="jetson_camera" name="jetson_camera" output="screen"/-->
+  <node pkg="jetson_ros" type="jetson_camera" name="jetson_camera" output="screen"/>
+
+  <!-- Show in Rviz   -->
+  <group if="$(arg rviz)">
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find flyingcar_sensors)/rviz/rgb.rviz" />
+  </group>
+
+</launch>
