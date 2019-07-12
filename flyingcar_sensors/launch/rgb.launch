@@ -2,7 +2,7 @@
   <arg name="rviz" default="false"/>
 
   <!--node pkg="jetson_nano_camera" type="jetson_camera" name="jetson_camera" output="screen"/-->
-  <node pkg="jetson_ros" type="jetson_camera" name="jetson_camera" output="screen"/>
+  <node pkg="jetbot_ros" type="jetbot_camera" name="jetson_nano_camera" output="screen"/>
 
   <!-- Show in Rviz   -->
   <group if="$(arg rviz)">
