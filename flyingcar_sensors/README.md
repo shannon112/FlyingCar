@@ -80,3 +80,4 @@ git clone https://github.com/shannon112/jetson_nano_camera.git
 cd ~/workspace/catkin_ws
 catkin_make
 ```
+> NOTE: or using another pack on [jetson_utils](https://github.com/nicolas-beaufort/jetson-utils) and [jetson_ros](https://github.com/nicolas-beaufort/jetbot_ros)
