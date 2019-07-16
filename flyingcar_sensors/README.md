@@ -47,7 +47,7 @@ sudo apt install ros-kinetic-rgbd-launch
 ```bash
 # build laser ros driver
 cd ~/workspace/catkin_ws/src
-git clone https://github.com/EAIBOT/ydlidar.git
+git clone https://github.com/YDLIDAR/ydlidar_ros.git
 cd ~/workspace/catkin_ws
 catkin_make
 
