@@ -1,0 +1,21 @@
+<launch>
+  <arg name="rviz" default="false"/>
+
+  <include file="$(find flyingcar_description)/launch/spawn.launch">
+    <arg name="rviz" value="false"/>
+  </include>
+
+  <include file="$(find flyingcar_sensors)/launch/imu.launch">
+    <arg name="rviz" value="false"/>
+  </include>
+
+  <include file="$(find flyingcar_sensors)/launch/lidar.launch">
+    <arg name="rviz" value="false"/>
+  </include>
+
+  <!-- Show in Rviz   -->
+  <group if="$(arg rviz)">
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find flyingcar_demo)/rviz/spawn_with_sensors.rviz" />
+  </group>
+
+</launch>
