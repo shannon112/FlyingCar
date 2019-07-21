@@ -15,30 +15,25 @@
   <!--sim or real-->
   <arg name="env" default="false"/>
   <!--load state map (.pbstream)-->
-  <arg name="map_filename" default="$(find ironfish_cartographer_navigation)/map/test.pbstream"/>
+  <arg name="map_filename" default="$(find flyingcar_cartographer)/map/test.pbstream"/>
   <!--load lua configuration file (.lua)-->
-  <arg name="lua_filename" default="ironfish_allcarto_locali.lua" if="$(arg env)"/> <!--or hybrid-->
-  <arg name="lua_filename" default="ironfish_seperate_locali.lua" unless="$(arg env)"/>
-
-  <include file="$(find ironfish_cartographer_navigation)/launch/ironfish_nav_blank.launch"/>
+  <arg name="lua_filename" default="flyingcar_allcarto_locali.lua" if="$(arg env)"/> <!--or hybrid-->
+  <arg name="lua_filename" default="flyingcar_seperate_locali.lua" unless="$(arg env)"/>
 
   <!--runing cartographer slam-->
   <node name="cartographer" pkg="cartographer_ros"
       type="cartographer_node" args="
-          -configuration_directory $(find ironfish_cartographer_navigation)/config
+          -configuration_directory $(find flyingcar_cartographer)/config
           -configuration_basename $(arg lua_filename)
           -load_state_filename $(arg map_filename)
           -start_trajectory_with_default_topics=false"
       output="screen">
       <remap from="imu" to="imu" />
-      <remap from="odom" to="ironfish_diff_drive_controller/odom" />
+      <!--remap from="odom" to="flyingcar_diff_drive_controller/odom" /-->
   </node>
 
   <!--generate grid map from state-->
   <node name="cartographer_occupancy_grid_node" pkg="cartographer_ros"
       type="cartographer_occupancy_grid_node" args="-resolution 0.05" />
-
-  <!-- Run RViz Node -->
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find ironfish_cartographer_navigation)/cartographer.rviz" output="screen"/>
 
 </launch>

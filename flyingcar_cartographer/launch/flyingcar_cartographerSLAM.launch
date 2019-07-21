@@ -17,13 +17,13 @@
 <launch>
   <!--sim or real-->
   <arg name="env" default="true"/>
-  <arg name="lua_filename" default="ironfish_allcarto.lua" if="$(arg env)"/> <!--or hybrid-->
-  <arg name="lua_filename" default="ironfish_seperate.lua" unless="$(arg env)"/>
+  <arg name="lua_filename" default="flyingcar_allcarto.lua" if="$(arg env)"/> <!--or hybrid-->
+  <arg name="lua_filename" default="flyingcar_seperate.lua" unless="$(arg env)"/>
 
   <!-- Run Cartographer Node -->
   <node name="cartographer_node" pkg="cartographer_ros"
       type="cartographer_node" args="
-          -configuration_directory $(find ironfish_cartographer_navigation)/config
+          -configuration_directory $(find flyingcar_cartographer)/config
           -configuration_basename $(arg lua_filename)"
       output="screen">
     <remap from="imu" to="imu" />
@@ -32,8 +32,5 @@
 
   <node name="cartographer_occupancy_grid_node" pkg="cartographer_ros"
       type="cartographer_occupancy_grid_node" args="-resolution 0.05" />
-
-  <!-- Run RViz Node -->
-  <!--node name="rviz" pkg="rviz" type="rviz" args="-d $(find ironfish_cartographer_navigation)/cartographer.rviz" output="screen"/-->
 
 </launch>
