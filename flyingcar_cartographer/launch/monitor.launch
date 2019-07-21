@@ -1,3 +1,0 @@
-<launch>
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find ironfish_cartographer_navigation)/rviz/cartographer.rviz" output="screen"/>
-</launch>
