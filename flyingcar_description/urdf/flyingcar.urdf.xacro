@@ -36,7 +36,7 @@
     <!-- Sparkfun imu-->
     <joint name="imu_joint" type="fixed">
       <axis xyz="0 0 0"/> <!-- 0 1 0 -->
-      <origin xyz="0 0 0.06" rpy="0 3.14159 0"/>
+      <origin xyz="0 0 0.06" rpy="3.1416 0 3.1416"/>
       <parent link="${parent}"/>
       <child link="base_imu_link"/>
     </joint>
