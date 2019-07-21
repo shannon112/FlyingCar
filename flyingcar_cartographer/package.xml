@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package>
-  <name>flyingcar_cartographer_navigation</name>
+  <name>flyingcar_cartographer</name>
   <version>0.0.0</version>
   <description>Launch files and code for autonomous navigation of the flyingcar using Google Cartographer</description>
   <author email="abhattacharjee@clearpathrobotics.com">Aditya Bhattacharjee</author>
