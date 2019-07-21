@@ -7,7 +7,7 @@ Sparkfun imu m0: miniUSB to USB3.0
 ydlidar power: miniUSB to USB2.0 (power only)   
 jetson nano power: miniUSB to USB2.0 (power only)   
 
-<img src="https://github.com/shannon112/FlyingCar/blob/master/flyingcar_demo/result/device_back.jpg" height=270/> <img src="https://github.com/shannon112/FlyingCar/blob/master/flyingcar_demo/result/device_front.jpg" height=270/> <img src="https://github.com/shannon112/FlyingCar/blob/master/flyingcar_demo/result/real_rviz.png" height=270/>
+<img src="https://github.com/shannon112/FlyingCar/blob/master/flyingcar_bringup/result/device_back.jpg" height=270/> <img src="https://github.com/shannon112/FlyingCar/blob/master/flyingcar_bringup/result/device_front.jpg" height=270/> <img src="https://github.com/shannon112/FlyingCar/blob/master/flyingcar_bringup/result/real_rviz.png" height=270/>
 
 ## Usage  
 flyingcar_description
