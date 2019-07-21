@@ -7,7 +7,6 @@ Panels:
         - /Global Options1
         - /TF1/Frames1
         - /Imu1/Acceleration properties1
-        - /Map1/Status1
       Splitter Ratio: 0.5
     Tree Height: 379
   - Class: rviz/Selection
@@ -165,34 +164,33 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
-        base_link:
-          base_imu_link:
-            {}
-          camera_link:
-            camera_depth_frame:
-              camera_color_frame:
-                camera_color_optical_frame:
-                  {}
-              camera_depth_optical_frame:
-                {}
-              camera_left_ir_frame:
-                camera_left_ir_optical_frame:
-                  {}
-              camera_right_ir_frame:
-                camera_right_ir_optical_frame:
-                  {}
-          hokuyo_link:
-            {}
-          pack_link:
-            {}
         map:
           odom:
-            {}
+            base_link:
+              base_imu_link:
+                {}
+              camera_link:
+                camera_depth_frame:
+                  camera_color_frame:
+                    camera_color_optical_frame:
+                      {}
+                  camera_depth_optical_frame:
+                    {}
+                  camera_left_ir_frame:
+                    camera_left_ir_optical_frame:
+                      {}
+                  camera_right_ir_frame:
+                    camera_right_ir_optical_frame:
+                      {}
+              hokuyo_link:
+                {}
+              pack_link:
+                {}
       Update Interval: 0
       Value: true
     - Class: rviz/Image
       Enabled: true
-      Image Topic: /camera/aligned_depth_to_color/image_raw
+      Image Topic: /jetson_nano_camera/raw
       Max Value: 1
       Median window: 5
       Min Value: 0
