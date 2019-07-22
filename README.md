@@ -39,7 +39,7 @@ roslaunch flyingcar_bringup spawn_livd.launch rviz:=0
 roslaunch flyingcar_bringup spawn_liv.launch rviz:=0
 # bringup real sensors(laser, imu) on FlyingCar
 roslaunch flyingcar_bringup spawn_li.launch rviz:=0
-# monitor by pc ros master
+# monitor sensor data by pc
 roslaunch flyingcar_bringup bringup_rviz.launch
 ```
 test CSI camera with gstream, more test could be found at [JetsonHacksNano/CSI-Camera](https://github.com/JetsonHacksNano/CSI-Camera)
