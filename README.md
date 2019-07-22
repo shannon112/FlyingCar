@@ -31,12 +31,16 @@ roslaunch flyingcar_sensors rgbd.launch rviz:=1
 # rgb camera
 roslaunch flyingcar_sensors rgb.launch rviz:=1
 ```
-flyingcar_demo
+flyingcar_bringup
 ```bash
-# real device all sensor launch on FlyingCar
-roslaunch flyingcar_demo spawn_with_sensors.launch rviz:=0
+# bringup real sensors(rgbd, laser, imu) on FlyingCar
+roslaunch flyingcar_bringup spawn_livd.launch rviz:=0
+# bringup real sensors(rgb, laser, imu) on FlyingCar
+roslaunch flyingcar_bringup spawn_liv.launch rviz:=0
+# bringup real sensors(laser, imu) on FlyingCar
+roslaunch flyingcar_bringup spawn_li.launch rviz:=0
 # monitor by pc ros master
-roslaunch flyingcar_demo spawn_with_sensors_rviz.launch
+roslaunch flyingcar_bringup bringup_rviz.launch
 ```
 test CSI camera with gstream, more test could be found at [JetsonHacksNano/CSI-Camera](https://github.com/JetsonHacksNano/CSI-Camera)
 ```bash
