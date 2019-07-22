@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <!--
   Copyright 2016 The Cartographer Authors
   Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,7 +16,7 @@
   <!--sim or real-->
   <arg name="env" default="true"/>
   <!--load state map (.pbstream)-->
-  <arg name="map_filename" default="$(find flyingcar_cartographer)/map/map.bag.pbstream"/>
+  <arg name="map_filename" default="$(find flyingcar_cartographer)/map/map2.bag.pbstream"/>
   <!--load lua configuration file (.lua)-->
   <arg name="lua_filename" default="flyingcar_allcarto_locali.lua" if="$(arg env)"/> <!--or hybrid-->
   <arg name="lua_filename" default="flyingcar_seperate_locali.lua" unless="$(arg env)"/>
