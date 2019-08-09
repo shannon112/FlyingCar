@@ -13,7 +13,7 @@
     <arg name="rviz" value="false"/>
   </include>
 
-  <include file="$(find flyingcar_sensors)/launch/rgb.launch">
+  <include file="$(find flyingcar_sensors)/launch/gscam_rgb.launch">
     <arg name="rviz" value="false"/>
   </include>
 
