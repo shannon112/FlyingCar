@@ -7,9 +7,9 @@
   <xacro:property name="M_PI" value="3.14159"/>
   <xacro:macro name="flyingcar" params="parent">
 
-    <!--body of sensor-->
+    <!--visual body of sensor-->
     <joint name="pack_link_joint" type="fixed">
-      <origin xyz="0 0 0.0375" rpy="0 0 0"/>
+      <origin xyz="0 0 0.04675" rpy="0 0 0"/>
       <parent link="${parent}"/>
       <child link="pack_link" />
     </joint>
@@ -21,13 +21,13 @@
       </inertial>
       <collision name="collision_base_link">
         <geometry>
-          <box size="0.08 0.12 0.075"/>
+          <box size="0.08 0.12 0.0935"/>
         </geometry>
       </collision>
       <visual>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <box size="0.08 0.12 0.075"/>
+          <box size="0.08 0.12 0.0935"/>
         </geometry>
         <material name="blue"/>
       </visual>
@@ -36,7 +36,7 @@
     <!-- Sparkfun imu-->
     <joint name="imu_joint" type="fixed">
       <axis xyz="0 0 0"/> <!-- 0 1 0 -->
-      <origin xyz="0 0 0.06" rpy="0 3.1416 3.1416"/>
+      <origin xyz="0 0 0.078" rpy="0 3.1416 3.1416"/>
       <parent link="${parent}"/>
       <child link="base_imu_link"/>
     </joint>
@@ -46,22 +46,25 @@
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.000001" iyz="0" izz="0.0001"/>
       </inertial>
-      <visual>
-        <origin rpy="0 0 0" xyz="0 0 0"/>
-        <geometry>
-          <box size="0.001 0.001 0.001"/>
-        </geometry>
-      </visual>
     </link>
+
+    <!-- csi camera -->
+    <joint name="csi_camera_joint" type="fixed">
+      <axis xyz="0 0 0"/> <!-- 0 1 0 -->
+      <origin xyz="0 0 0.043" rpy="0 0 0"/>
+      <parent link="${parent}"/>
+      <child link="csi_camera_link"/>
+    </joint>
+    <link name="csi_camera_link"/>
 
     <!-- Hokuyo utm30lx-->
     <xacro:hokuyo_utm30lx name="hokuyo" parent="${parent}">
-      <origin xyz="0.0 0.0 0.105" rpy="0 0 0"/> <!--real measure from blue extend version-->
+      <origin xyz="0 0 0.1275" rpy="0 0 0"/> <!--real measure from blue extend version-->
     </xacro:hokuyo_utm30lx>
 
     <!-- Intel realsense-->
     <xacro:sensor_d435 parent="${parent}">
-      <origin xyz="0.032 0.0 0.05" rpy="0 0 0"/> <!--real measure from blue extend version-->
+      <origin xyz="0.032 0 0.071" rpy="0 0 0"/> <!--real measure from blue extend version-->
     </xacro:sensor_d435>
 
   </xacro:macro>

@@ -59,8 +59,6 @@ Visualization Manager:
           Value: true
         base_link:
           Value: true
-        body_link:
-          Value: true
         camera_color_frame:
           Value: true
         camera_color_optical_frame:
@@ -81,6 +79,8 @@ Visualization Manager:
           Value: true
         hokuyo_link:
           Value: true
+        pack_link:
+          Value: true
       Marker Scale: 0.400000006
       Name: TF
       Show Arrows: true
@@ -89,8 +89,6 @@ Visualization Manager:
       Tree:
         base_link:
           base_imu_link:
-            {}
-          body_link:
             {}
           camera_link:
             camera_depth_frame:
@@ -106,6 +104,8 @@ Visualization Manager:
                 camera_right_ir_optical_frame:
                   {}
           hokuyo_link:
+            {}
+          pack_link:
             {}
       Update Interval: 0
       Value: true
@@ -123,17 +123,10 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
         base_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
-        body_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
         camera_color_frame:
           Alpha: 1
           Show Axes: false
@@ -172,6 +165,11 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
         hokuyo_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        pack_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -197,9 +195,9 @@ Visualization Manager:
       Enabled: true
       Invert Rainbow: false
       Max Color: 255; 255; 255
-      Max Intensity: 0
+      Max Intensity: 8.45798642e-38
       Min Color: 0; 0; 0
-      Min Intensity: 0
+      Min Intensity: 8.45798642e-38
       Name: LaserScan
       Position Transformer: XYZ
       Queue Size: 10
@@ -258,7 +256,7 @@ Visualization Manager:
   Global Options:
     Background Color: 48; 48; 48
     Default Light: true
-    Fixed Frame: base_imu_link
+    Fixed Frame: base_link
     Frame Rate: 30
   Name: root
   Tools:
@@ -294,10 +292,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.309875309
+      Pitch: 0.279875219
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.196264461
+      Yaw: 0.566264272
     Saved: ~
 Window Geometry:
   Displays:

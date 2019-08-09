@@ -5,14 +5,6 @@
 
   <xacro:flyingcar parent="base_link"/>
 
-  <link name="base_link"><!--bottom of sensor pack-->
-    <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry>
-        <box size="0.01 0.01 0.01" />
-      </geometry>
-      <material name="White" />
-    </visual>
-  </link>
-
+  <link name="base_link"/><!--bottom of sensor pack-->
+  
 </robot>
