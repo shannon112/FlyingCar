@@ -1,5 +1,6 @@
 <launch>
   <!-- Command Line Arguments -->
+  <arg name="rviz" default="false"/>
   <arg name="cam_name" default="csi_camera" />               <!-- The name of the camera (corrsponding to the camera info) -->
   <arg name="frame_id" default="csi_camera_link" />          <!-- The TF frame ID. -->
   <arg name="sync_sink" default="true" />                    <!-- Synchronize the app sink. Setting this to false may resolve problems with sub-par framerates. -->
@@ -24,4 +25,9 @@
     <remap from="camera/image_raw" to="$(arg cam_name)/image_raw" />
     <remap from="camera/camera_info" to="$(arg cam_name)/camera_info" />
   </node>
+
+  <!-- Show in Rviz   -->
+  <group if="$(arg rviz)">
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find flyingcar_sensors)/rviz/rgb.rviz" />
+  </group>
 </launch>
