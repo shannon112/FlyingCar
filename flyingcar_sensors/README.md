@@ -97,7 +97,7 @@ get camera_info.yml
 ```
 rosrun camera_calibration cameracalibrator.py --size 7x6 --square 0.108 image:=/csi_camera/image_raw
 vim camera_info.ini
-rosrun camera_calibration_parsers convert camera_info.ini camera_info.yml
+rosrun camera_calibration_parsers convert camera_info.ini camera_info.yaml
 ```
 calculate true framerate
 ```
