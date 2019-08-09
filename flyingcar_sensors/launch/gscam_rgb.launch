@@ -3,12 +3,11 @@
   <arg name="cam_name" default="csi_camera" />               <!-- The name of the camera (corrsponding to the camera info) -->
   <arg name="frame_id" default="csi_camera_link" />          <!-- The TF frame ID. -->
   <arg name="sync_sink" default="true" />                    <!-- Synchronize the app sink. Setting this to false may resolve problems with sub-par framerates. -->
-  <arg name="width" default="744" />                         <!-- Image Width -->
+  <arg name="width" default="640" /> <!--744 no distortion--><!-- Image Width -->
   <arg name="height" default="480" />                        <!-- Image Height -->
   <arg name="fps" default="30" />                            <!-- Desired framerate. True framerate may not reach this if set too high. -->
 
   <!-- Make arguments available to parameter server -->
-  <param name="$(arg cam_name)/camera_id" type="int" value="$(arg sensor_id)" />
   <param name="$(arg cam_name)/image_width" type="int" value="$(arg width)" />
   <param name="$(arg cam_name)/image_height" type="int" value="$(arg height)" />
   <param name="$(arg cam_name)/target_fps" type="int" value="$(arg fps)" />
