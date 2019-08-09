@@ -87,3 +87,19 @@ cd ~/workspace/catkin_ws
 catkin_make
 ```
 > NOTE: or using another pack on [jetson_utils](https://github.com/nicolas-beaufort/jetson-utils) and [jetson_ros](https://github.com/nicolas-beaufort/jetbot_ros)
+
+# Calibration
+**flyingcar_sensors IMU**
+https://github.com/shannon112/imu_calibration.git
+
+**flyingcar_sensors RGB cam**
+get camera_info.yml
+```
+rosrun camera_calibration cameracalibrator.py --size 7x6 --square 0.108 image:=/csi_camera/image_raw
+vim camera_info.ini
+rosrun camera_calibration_parsers convert camera_info.ini camera_info.yml
+```
+calculate true framerate
+```
+rostopic hz /csi_camera/image_raw
+```
