@@ -51,6 +51,9 @@ roslaunch flyingcar_cartographer flyingcar_pure_localization.launch
 roslaunch flyingcar_cartographer flyingcar_init_pose.launch
 # monitor result by pc
 roslaunch flyingcar_cartographer cartograher_rviz.launch
+# save map as .pbstream
+rosservice call /finish_trajectory 0
+rosservice call /write_state "{filename: '${HOME}/Downloads/map.bag.pbstream'}"
 ```
 test CSI camera with gstream, more test could be found at [JetsonHacksNano/CSI-Camera](https://github.com/JetsonHacksNano/CSI-Camera)
 ```bash
