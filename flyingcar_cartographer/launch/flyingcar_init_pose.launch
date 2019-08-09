@@ -5,7 +5,7 @@
   <!--sim or real-->
   <arg name="env" default="true"/>
   <!--load state map (.pbstream)-->
-  <arg name="map_filename" default="$(find flyingcar_cartographer)/map/map2.bag.pbstream"/>
+  <arg name="map_filename" default="$(find flyingcar_cartographer)/map/map3.bag.pbstream"/>
   <!--load lua configuration file (.lua)-->
   <arg name="lua_filename" default="flyingcar_allcarto_locali.lua" if="$(arg env)"/> <!--or hybrid-->
   <arg name="lua_filename" default="flyingcar_seperate_locali.lua" unless="$(arg env)"/>
@@ -15,7 +15,7 @@
         ...
         -configuration_directory '$(find flyingcar_cartographer)/config'
         -configuration_basename '$(arg lua_filename)'
-        -initial_pose '{to_trajectory_id = 0, relative_pose = { translation = { 1, 1, 0}, rotation = {0., 0., 0., } } }'"
+        -initial_pose '{to_trajectory_id = 0, relative_pose = { translation = { 0, 0, 0}, rotation = {0., 0., 0., } } }'"
     output="screen">
   </node>
 </launch>
