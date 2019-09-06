@@ -14,6 +14,8 @@ sudo reboot
 # some dependences if error occurs, but the gui may not support on melodic (Ubuntu18.04), not found apt python-visual pkg
 pip install pyserial
 pip install vpython 
+
+sudo apt install ros-kinetic-rviz-imu-plugin 
 ```
 **flyingcar_sensors RGBD**, because librealsense could not directly install at ARM-based SBC, we would follow jetsonhacks [article](https://www.jetsonhacks.com/2019/05/16/jetson-nano-realsense-depth-camera/) to build the libraries.
 ```bash
