@@ -44,6 +44,9 @@ catkin_make
 
 # rs_rgbd launch dependence
 sudo apt install ros-kinetic-rgbd-launch
+
+# octomap visualization
+sudo apt install ros-kinetic-octomap-rviz-plugins 
 ```
 **flyingcar_sensors Lidar**
 ```bash
