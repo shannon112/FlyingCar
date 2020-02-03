@@ -4,6 +4,7 @@
 # build imu ros driver
 cd ~/workspace/catkin_ws/src
 git clone https://github.com/KristofRobot/razor_imu_9dof
+sudo apt-get install python-visual
 cd ~/workspace/catkin_ws
 catkin_make
 
