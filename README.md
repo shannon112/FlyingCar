@@ -9,6 +9,8 @@ jetson nano power: miniUSB to USB2.0 (power only)
 
 <img src="https://github.com/shannon112/FlyingCar/blob/master/flyingcar_bringup/result/device_back.jpg" height=270/> <img src="https://github.com/shannon112/FlyingCar/blob/master/flyingcar_bringup/result/device_front.jpg" height=270/> <img src="https://github.com/shannon112/FlyingCar/blob/master/flyingcar_bringup/result/real_rviz.png" height=270/>
 
+<img src="https://github.com/shannon112/FlyingCar/blob/master/flyingcar_bringup/result/IMG_0018.JPG" height=220/> <img src="https://github.com/shannon112/FlyingCar/blob/master/flyingcar_bringup/result/IMG_0827.JPG" height=220/> <img src="https://github.com/shannon112/FlyingCar/blob/master/flyingcar_bringup/result/IMG_3050.JPG" height=220/> <img src="https://github.com/shannon112/FlyingCar/blob/master/flyingcar_bringup/result/IMG_3808.JPG" height=220/> 
+
 ## Usage  
 flyingcar_description
 ```bash
