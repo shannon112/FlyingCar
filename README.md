@@ -1,5 +1,5 @@
 # FlyingCar
-A portable sensor pack with laser range scanner, IMU, CSI camera, RGBD camera and SBC, no encoder needed.  
+A portable sensor pack with laser range scanner, IMU, CSI camera, RGBD camera and SBC, no wheel odometry needed.  
 
 ydlidar laser: typeC to USB3.0  
 realsense d435: typeC to USB3.0  
